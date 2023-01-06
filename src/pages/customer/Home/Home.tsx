@@ -62,15 +62,13 @@ const mainCategories = [
 ]
 
 interface IHomeProps { }
-const Home: React.FC<IHomeProps> = observer(() => {
+export const Home: React.FC<IHomeProps> = observer(() => {
 
   const {setSelectedCategory} = store
 
   return (
     <>
-    <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="" className='mb-4' />
-    <h1 className='text-center text-md'>Habil Pizza Hızlı Sipariş Hattı</h1>
-    <p className='text-center text-sm mb-4'>Siparişinizi buradan doğrudan şefe iletebilirsiniz!</p>
+
       <div className="flex flex-col max-w-xl mx-auto">
         {
           mainCategories.map((data, i) => (
@@ -88,5 +86,3 @@ const Home: React.FC<IHomeProps> = observer(() => {
     </>
   )
 })
-
-export default Home
